@@ -13,9 +13,16 @@ body{
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(#7bbccc, #8e7bb1);
+
+    background-image: url(img/nublado.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
 }
+
 #container{
-    background-color: #f0f8ff;
+    background-color: #f8f8f8;
     border-radius: 20px;
     padding: 18px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -42,13 +49,13 @@ body{
 }
 
 #search button{
-    background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
 #weather{
     margin-top: 20px;
+    display: none;
 }
 
 #weather.show{
@@ -67,7 +74,7 @@ body{
     align-items: center;
     justify-content: space-around;
     gap: 20px;
-    background: linear-gradient(90deg, #7bbccc, #80bdaf);
+    background: linear-gradient(90deg, #b4cbd1, #80bdaf);
     color: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -131,4 +138,16 @@ body{
 
 #wind_icon{
     color: #8e5496;
+}
+
+#alert{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#alert img{
+    width: 300px;
+    margin-top: 20px;
 }
