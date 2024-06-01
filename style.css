@@ -12,12 +12,14 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(#7bbccc, #8e7bb1);
+    background: linear-gradient(#eeeff0, #9f9ea0);
 
-    background-image: url(img/nublado.jpg);
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    transition: 500ms;
     opacity: 1;
 }
 

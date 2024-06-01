@@ -54,8 +54,10 @@ function showInfo(json){
     document.querySelector('#humidity').innerHTML = `${json.humidity}%`;
     document.querySelector('#wind').innerHTML = `${json.windSpeed.toFixed(1)}km/h`;
 
-    if(json.description == 'nublado'){
-        alert('oi')
+    let app = document.querySelector('.app');
+
+    if(json.tempIcon == '04d'){
+        app.style.backgroundImage = `url(img/dia-nuvens.jpg)`;
     }
 }
 
