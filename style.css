@@ -14,7 +14,6 @@ body{
     min-height: 100vh;
     background: linear-gradient(#eeeff0, #9f9ea0);
 
-    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +27,7 @@ body{
     border-radius: 20px;
     padding: 18px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
 }
 
 #search{
@@ -152,4 +152,127 @@ body{
 #alert img{
     width: 300px;
     margin-top: 20px;
+}
+
+@media (max-width:550px){
+    #container{
+        width: 300px;
+    }
+    #search{
+        gap: 4px;
+        padding: 2px 6px;
+    }
+    
+    #search input{
+        font-size: 15px;
+        width: 100%;
+    }
+    
+    #search input:focus-visible{
+        outline: none;
+    }
+    
+    #search button{
+        border: none;
+        cursor: pointer;
+    }
+    
+    #weather{
+        margin-top: 20px;
+        display: none;
+    }
+    
+    #weather.show{
+        display: block;
+    }
+    
+    #weather #title{
+        text-align: center;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #372f3f;
+    }
+    
+    #temp{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        background: linear-gradient(90deg, #b4cbd1, #80bdaf);
+        color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    
+    #temp_img{
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    }
+    
+    #temp_value{
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 55px;
+    }
+    
+    #temp_description{
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+    
+    #other_infos{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    
+    #other_infos .info{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 4px 10px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        gap: 10px;
+    }
+    
+    #other_infos .info h2{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    #other_infos .info i{
+        font-size: 20px;
+        width: 20%;
+        text-align: center;
+    }
+    
+    #temp_max_icon{
+        color: #7f1d1d;
+    }
+    
+    #temp_min_icon{
+        color: #0284c7;
+    }
+    
+    #humidity_icon{
+        color: #78b0cc;
+    }
+    
+    #wind_icon{
+        color: #8e5496;
+    }
+    
+    #alert{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #alert img{
+        width: 300px;
+        margin-top: 20px;
+    }
 }

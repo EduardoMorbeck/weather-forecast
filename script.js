@@ -56,9 +56,45 @@ function showInfo(json){
 
     let app = document.querySelector('.app');
 
-    if(json.tempIcon == '04d'){
-        app.style.backgroundImage = `url(img/dia-nuvens.jpg)`;
+    switch(json.tempIcon){
+        case '01d':
+            app.style.backgroundImage = `url(img/dia-céu-limpo.jpg)`;
+            break;
+        case '01n':
+            app.style.backgroundImage = `url(img/noite-céu-limpo.jpg)`;
+            break;
+        case '02d':
+        case '03d':
+        case '04d':
+            app.style.backgroundImage = `url(img/dia-nuvens.jpg)`;
+            break;
+        case '02n':
+        case '03n':
+        case '04n':
+            app.style.backgroundImage = `url(img/noite-nuvens.jpg)`;
+            break;
+        case '09d':
+        case '10d':
+            app.style.backgroundImage = `url(img/dia-chuva.jpg)`;
+            break;
+        case '09n':
+        case '10n':
+            app.style.backgroundImage = `url(img/noite-chuva.jpg)`;
+            break;
+        case '11n':
+            app.style.backgroundImage = `url(img/tempestade.jpg)`;
+            break;
+        case '13n':
+            app.style.backgroundImage = `url(img/neve.jpg)`;
+            break;
+        case '50n':
+            app.style.backgroundImage = `url(img/névoa.jpg)`;
+            break;
     }
+
+    /*if(json.tempIcon == '01n'){
+        app.style.backgroundImage = `url(img/noite-céu-limpo.jpg)`;
+    }*/
 }
 
 function showAlert(msg){
