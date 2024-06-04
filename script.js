@@ -6,7 +6,10 @@ document.querySelector('#search').addEventListener('submit', async (event) => {
     if(!cityName){
         document.querySelector('#weather').classList.remove('show');
         showAlert('Digite uma cidade...');
+        let app = document.querySelector('.app');
+        app.style.backgroundImage = '';
         return;
+        
     }
 
     const apiKey = '42a9499c1e896fff5a2e282c5447a296'
@@ -34,6 +37,9 @@ document.querySelector('#search').addEventListener('submit', async (event) => {
 
         <img src="img/search-animate.svg">
         `)
+
+        let app = document.querySelector('.app');
+        app.style.backgroundImage = '';
     }
 });
 
@@ -92,9 +98,6 @@ function showInfo(json){
             break;
     }
 
-    /*if(json.tempIcon == '01n'){
-        app.style.backgroundImage = `url(img/noite-céu-limpo.jpg)`;
-    }*/
 }
 
 function showAlert(msg){
